@@ -126,6 +126,7 @@ public class JenkinsScheduler implements Scheduler {
                 .setPrincipal(principal)
                 .setCheckpoint(mesosCloud.isCheckpoint())
                 .setWebuiUrl(webUrl != null ? webUrl : "")
+                .setFailoverTimeout(345600)
                 .build();
 
         LOGGER.info("Initializing the Mesos driver with options"
